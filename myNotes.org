@@ -1,0 +1,63 @@
+#+title: My Notes
+
+Christmas 2024 - Son's family gave me SICM 1st edition as a gift!
+Reading it and working problems in scheme:
+
+Installation on my personal laptop using Arch Linux
+
+**mit-scheme**
+
+john@archlinux  ~/Projects
+$ git clone https://aur.archlinux.org/mit-scheme.git
+$ cd mit-scheme/
+$ makepkg --syncdeps
+
+couldn't find public key therefore...
+$ makepkg --syncdeps --skippgpcheck
+
+$ makepkg --install
+
+**sicm library**
+
+https://groups.csail.mit.edu/mac/users/gjs/6.5160/mechanics-system-installation/native-code/installation.html
+
+  519  20250121 05:09:02 tar xzf scmutils-20230902.tar.gz
+  520  20250121 05:09:10 cd scmutils-20230902
+  523  20250121 05:10:14 sudo ./install.sh
+  525  20250121 05:13:27 sudo cp mechanics.sh /usr/local/bin/
+  526  20250121 05:13:40 which mechanics.sh
+  527  20250121 05:14:18 cd ~/Documents/scheme/
+  530  20250121 05:15:03 cd ../sicm/
+  532  20250121 05:16:20 mechanics.sh
+
+**Verify scheme with scmutils functioning at command line:**
+
+john@archlinux  ~/Documents/sicm (main =)
+$ mechanics.sh
+MIT/GNU Scheme running under GNU/Linux
+Type `^C' (control-C) followed by `H' to obtain information about interrupts.
+
+Copyright (C) 2022 Massachusetts Institute of Technology
+This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+Image saved on Saturday September 2, 2023 at 10:49:05 PM
+  Release 12.1 || SF || LIAR/x86-64 || SOS || XML || Edwin || X11 || X11-Screen || ScmUtils
+
+1 ]=> 5
+#| 5 |#
+
+1 ]=> (square 5)
+#| 25 |#
+
+1 ]=> ^C
+Interrupt option (? for help):
+
+Fortitudine vincimus.
+john@archlinux  ~/Documents/sicm (main =)
+
+
+**doom emacs**
+
+
+found that mit-scheme code blocks will not work within org mode.
