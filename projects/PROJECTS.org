@@ -1,0 +1,52 @@
+* Projects — choose one medium project
+
+Each project should include:
+- README.org explaining goals, usage, and how to run experiments
+- runnable Scheme code (in this repo) and any helper scripts
+- short report (README section or PDF) with results, plots, and analysis
+- optional Emacs/Geiser tips for running interactively
+
+** Project 1: Pendulum project (recommended)
+*** Description
+Implement single- and double-pendulum simulations, energy diagnostics, and visualizations. Compare explicit integrators (e.g. RK4) with symplectic integrators (e.g. Verlet).
+*** Deliverables
+- pendulum.scm, integrators.scm, analysis.org with plots and discussion
+- scripts to reproduce plots from the command line and instructions for Emacs REPL
+*** Suggested steps
+1. Derive equations of motion and implement RHS functions
+2. Implement and test RK and symplectic integrators
+3. Run experiments for various dt and plot energy drift
+4. Write analysis and conclusions
+*** Evaluation criteria
+- correctness of equations and implementation
+- clarity and reproducibility of experiments
+- depth of analysis (energy conservation, stability)
+
+** Project 2: N-body gravitational simulation
+*** Description
+Implement an N-body solver with pairwise forces, simple collision handling/softening, and visualization.
+*** Deliverables
+- nbody.scm, run scripts, example scenes and analysis.org
+*** Suggested steps
+1. Implement force computation and naive O(N^2) integrator
+2. Optionally implement simple optimization (Barnes-Hut) as extension
+3. Analyze energy/momentum conservation
+
+** Project 3: Hamiltonian integrator exploration
+*** Description
+Study long-term behaviour of integrators on Hamiltonian systems (e.g., harmonic oscillator, pendulum, simple two-body).
+*** Deliverables
+- experiments.scm, integrators compare, report with plots (energy vs time)
+*** Suggested steps
+1. Implement benchmark systems and integrators
+2. Run long-term simulations and collect statistics
+3. Analyze and summarize findings
+
+** Submission and grading notes
+- Prefer reproducible commands (scheme --script or Makefile targets)
+- Include short README with exact commands to reproduce figures
+- Grading focuses on reproducibility, numerical correctness, analysis quality, and code clarity
+
+** Extensions (optional)
+- Add interactive Emacs notebooks or literate Org files that include code blocks
+- Create CI scripts that run smoke tests for core examples
